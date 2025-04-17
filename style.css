@@ -145,16 +145,10 @@ section,
   color: var(--color-secondary);
 }
 
-/* .jidelni__listek .container {
-  display: flex;
-  flex-direction: column;
-  row-gap: 30px;
-} */
-
 .jidelni__listek .karticky {
   display: flex;
   flex-direction: column;
-  row-gap: 30px;
+  gap: 30px;
 }
 
 .jidelni__listek h2 {
@@ -168,7 +162,7 @@ section,
   padding-inline: 20px;
   display: flex;
   flex-direction: column;
-  row-gap: 20px;
+  gap: 20px;
   align-items: center;
 }
 
@@ -210,14 +204,12 @@ section,
 
 .rozvoz li {
   display: flex;
-  /* flex-grow: 1; */
   gap: 20px;
   margin-block: 15px;
   align-items: center;
 }
 
 .rozvoz li img {
-  /* flex-shrink: 0; */
   flex-basis: 20px;
 }
 
@@ -254,7 +246,6 @@ section,
 }
 
 .footer li {
-  flex-basis: calc((100% - 70px) / 4);
   flex-shrink: 1;
   flex-grow: 1;
   white-space: nowrap;
@@ -301,6 +292,39 @@ section,
   .hero p {
     font-size: 1.25rem;
   }
+  .jidelni__listek .karticky {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .jidelni__listek .karticka {
+    flex: 1 1 calc((100% - 30px) / 2);
+  }
+  .footer .container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+  }
+  .rozvoz .container {
+    flex-direction: row;
+    gap: 60px;
+    align-items: center;
+  }
+  .rozvoz__box {
+    flex: 1 1 calc((100% - 60px) / 2);
+  }
+
+  .popisek {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 40px;
+  }
+
+  .rozvoz h2,
+  .rozvoz p {
+    margin: 0;
+  }
 }
 
 /* DESKTOP */
@@ -322,5 +346,8 @@ section,
   }
   .hero {
     padding-block: 150px;
+  }
+  .jidelni__listek .karticky {
+    flex-wrap: nowrap;
   }
 }
